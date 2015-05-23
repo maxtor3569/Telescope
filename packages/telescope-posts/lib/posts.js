@@ -30,17 +30,6 @@ Posts.schema = new SimpleSchema({
     }
   },
   /**
-    URL
-  */
-  url: {
-    type: String,
-    optional: true,
-    editableBy: ["member", "admin"],
-    autoform: {
-      type: "bootstrap-url"
-    }
-  },
-  /**
     Title
   */
   title: {
