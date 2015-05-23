@@ -32,7 +32,6 @@ telescope:singleday
 # telescope:sitemap
 telescope:subscribe-to-posts # notifications
 telescope:tagline-banner
-telescope:tags
 telescope:theme-base
 telescope:theme-hubble
 telescope:update-prompt
