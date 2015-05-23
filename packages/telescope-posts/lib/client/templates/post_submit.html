@@ -1,6 +1,10 @@
 <template name="post_submit">
 
   <div class="grid grid-module">
+    <p class="post-guideline">
+      Simply paste the original message as it was written
+      Textie hooks you up with responses from actual people. Keep it real!
+    </p>
     {{> quickForm collection="Posts" id="submitPostForm" template="bootstrap3-horizontal" input-col-class="controls" type="method" meteormethod="submitPost" fields=postFields}}
   </div>
   
