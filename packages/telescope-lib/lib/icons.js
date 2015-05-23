@@ -18,9 +18,9 @@ Telescope.utils.getIcon = function (iconName, iconClass) {
 Telescope.utils.icons = {
   open: "plus",
   close: "minus",
-  upvote: "chevron-up",
+  upvote: "thumbs-o-up",
   voted: "check",
-  downvote: "chevron-down",
+  downvote: "thumbs-o-down",
   facebook: "facebook-square",
   twitter: "twitter",
   googleplus: "google-plus",
