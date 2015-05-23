@@ -1,0 +1,94 @@
+<template name="hero_layout">
+  {{> css}}
+  <div class="outer-wrapper {{currentPage}} {{navLayout}}">
+    {{> mobile_nav}}
+    <div class="inner-wrapper template-{{pageName}}">
+      {{> nav}}
+      {{> modules "hero"}}
+
+      <style type="text/css">
+        {{extraCss}}
+      </style>
+
+      <style type="text/css">
+        /* Sample styles for HTML below */
+
+        .hero .copy h2,
+        .hero .copy h4
+        {
+          text-shadow: black 0.1em 0.1em 0.2em;
+        }
+
+        .hero .copy .button {
+          background: #de3314;
+          color: #fff;
+          font-size: 1.8em;
+          font-weight: 300;
+          margin: 2em auto 1.2em auto;
+          border-radius: 0;
+          -webkit-transition: background 1s;
+          transition: background 1s;
+
+        }
+
+        .hero .copy .button:hover {
+          background: #af2810;
+        }
+
+        .hero .learn-more {
+          font-size: 1.5em;
+          font-weight: 300;
+        }
+
+        .hero .learn-more a {
+          outline: none;
+          color: #fff;
+          font-size: 1.1em;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      </style>
+
+      <script>
+
+        // This is a hideous way to hide/show the hero, depending on whether
+        // we're on the / page or not...
+        window.setInterval(function()
+        {
+          if (window.location.pathname == "/")
+            $(".hero").show();
+          else
+            $(".hero").hide();
+        },
+        100);
+
+      </script>
+
+      <section class="hero" style="background-image: url('/textie_bg.jpg')">
+        <div class="hero-inner">
+          <div class="copy">
+            <h2>Crowdsource the ultimate replies to tricky text messages</h2>
+            <br />
+            <h4>Ever struggled to reply to a text message from that special someone?</h4>
+            <h4>Found it hard to respond to sheer stupidity?</h4>
+            <h4>Textie can help!</h4>
+            <br />
+            <a class="button" href="/submit">
+              Submit your Message!
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="content-wrapper">
+        {{> messages}}
+        {{> yield "adminMenu"}}
+        {{> yield "postListTop"}}
+        {{> yield}}
+        {{> footer}}
+      </div>
+      <div class="overlay hidden"></div>
+    </div>
+    {{{extraCode}}}
+  </div>
+</template>
