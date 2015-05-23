@@ -32,7 +32,7 @@ Posts.schema = new SimpleSchema({
   /**
     Title
   */
-  Text: {
+  Title: {
     type: String,
     optional: false,
     editableBy: ["member", "admin"]

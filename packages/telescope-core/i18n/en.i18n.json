@@ -23,7 +23,7 @@
   "new_posts": "New Posts",
 
   // Settings Schema
-  "text": "Text",
+  "title": "Title",
   "description": "Description",
   "siteUrl": "Site URL",
   "tagline": "Tagline",
