@@ -29,13 +29,22 @@ Package.onUse(function (api) {
   // client
 
   api.addFiles([
-    'lib/client/templates/hello.html',
-    'lib/client/templates/hello.js',
-    'lib/client/templates/custom_post_title.html',
-    'lib/client/templates/custom_post_title.js',
+    // 'lib/client/templates/hello.html',
+    // 'lib/client/templates/hello.js',
+    // 'lib/client/templates/custom_post_title.html',
+    // 'lib/client/templates/custom_post_title.js',
     'lib/client/stylesheets/custom.scss',
     'lib/client/custom_templates.js'
   ], ['client']);
+
+  api.addFiles([
+    'lib/client/hero_layout.html',
+    'lib/client/hero_layout.js',
+    // 'lib/client/hero.html',
+    // 'lib/client/hero.js',
+    'lib/client/hero.scss'
+  ], 'client');
+
 
   // server
 
