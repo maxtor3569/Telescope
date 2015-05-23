@@ -33,6 +33,9 @@ Posts.schema = new SimpleSchema({
     Title
   */
   title: {
+    label: function () {
+      return "Message"
+    },
     type: String,
     optional: false,
     editableBy: ["member", "admin"]
