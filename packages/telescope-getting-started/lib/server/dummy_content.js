@@ -35,6 +35,15 @@ var createComment = function (slug, username, body, parentBody) {
 };
 
 var createDummyUsers = function () {
+  for (var i = 0, len = 250; i < len; i++) {
+    Accounts.createUser({
+      username: 'SomeGuy' + i,
+      email: 'someguy' + i + '@telescopeapp.org',
+      profile: {
+        isDummy: true
+      }
+    });
+  }
   Accounts.createUser({
     username: 'Bruce',
     email: 'dummyuser1@telescopeapp.org',
@@ -59,6 +68,10 @@ var createDummyUsers = function () {
 };
 
 var createDummyPosts = function () {
+
+  for (var i = 0, len = 250; i < len; i++) {
+    createPost("bulk", moment().subtract(i, 'minutes').toDate(), "SomeGuy" + i);
+  }
 
   createPost("read_this_first", moment().toDate(), "Bruce", "telescope.png");
 

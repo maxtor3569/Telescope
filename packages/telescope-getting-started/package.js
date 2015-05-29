@@ -60,6 +60,7 @@ Package.onUse(function (api) {
     'lib/server/dummy_content.js'
   ], ['server']);
 
+  api.addFiles('content/bulk.md', 'server', { isAsset: true });
   api.addFiles('content/read_this_first.md', 'server', { isAsset: true });
   api.addFiles('content/deploying_telescope.md', 'server', { isAsset: true });
   api.addFiles('content/customizing_telescope.md', 'server', { isAsset: true });
