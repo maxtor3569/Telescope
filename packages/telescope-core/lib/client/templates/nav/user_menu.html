@@ -1,5 +1,7 @@
 <template name="user_menu">
   {{#if isLoggedIn}}
+    <a id="media-link" href="http://textie.strikingly.com/">Media Kit</a>
+    &nbsp;&nbsp;&nbsp;
     {{> menuComponent menuName="user" menuLabel=menuLabel menuItems=menuItems menuClass="header-submodule" menuMode=menuMode menuCollapsed=true}}
   {{else}}
     <a id="media-link" href="http://textie.strikingly.com/">Media Kit</a>
