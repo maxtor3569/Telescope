@@ -5,7 +5,7 @@
  */
 Posts.getSubParams = function (terms) {
 
-  var maxLimit = 200;
+  var maxLimit = 400;
 
   // console.log(terms)
 
