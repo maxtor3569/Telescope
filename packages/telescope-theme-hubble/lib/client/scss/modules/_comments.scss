@@ -147,10 +147,11 @@
 	@extend .grid-block;
 	@include small{
 		border-radius: 3px;
+        margin-left: 20px;
 	}
 	@include medium-large{
 		border-radius: 0 3px 3px 3px;
-        left: 10px;
+        margin-left: 10px;
 	}
 	font-size:14px;
 	z-index: 10;
@@ -194,11 +195,11 @@
 .comment-actions{
 	position:absolute;
 	@include small{
-		left:-10px;
+		left:-30px;
 		top:5px;
 	}
 	@include medium-large{
-		left:-40px;
+		left:-50px;
 		top:0px;
 	}
 	a{
