@@ -147,11 +147,9 @@
 	@extend .grid-block;
 	@include small{
 		border-radius: 3px;
-        margin-left: 20px;
 	}
 	@include medium-large{
 		border-radius: 0 3px 3px 3px;
-        margin-left: 10px;
 	}
 	font-size:14px;
 	z-index: 10;
@@ -195,11 +193,11 @@
 .comment-actions{
 	position:absolute;
 	@include small{
-		left:-30px;
+		left:-10px;
 		top:5px;
 	}
 	@include medium-large{
-		left:-40px;
+		left:-30px;
 		top:0px;
 	}
 	a{
@@ -211,8 +209,8 @@
 		}
 		position:relative;
 		display:block;
-		height:40px;
-		width:40px;
+		height:30px;
+		width:30px;
 		// background:$light-blue;
 		background:white;
 		box-shadow: 0 1px 1px black(0.15);
@@ -229,12 +227,12 @@
 			margin-bottom:1px;
 		}
 		i{
-			font-size:20px;
+			font-size:12px;
 			display:block;
 			position:absolute;
-			height:40px;
-			width:40px;
-			line-height:40px;
+			height:30px;
+			width:30px;
+			line-height:30px;
 			text-align:center;
 			text-indent:0;
 			// color:$light-blue2;

@@ -1,3 +1,16 @@
+$small-break: 600px;
+$medium-break: 800px;
+@mixin small(){
+  @media screen and (max-width: $small-break) {
+    @content;
+  }
+}
+@mixin medium-large(){
+  @media screen and (min-width: $small-break) {
+    @content;
+  }
+}
+
 .custom-hero-banner{
   text-align: center;
   color: purple;
@@ -15,4 +28,32 @@
 
 .social-media-glyphs a {
   margin: 0 5px 0 0;
+}
+
+.comment-content{
+	@include small{
+        margin-left: 20px;
+	}
+	@include medium-large{
+        margin-left: 10px;
+	}
+}
+
+.comment-actions{
+	@include small{
+		left:-30px;
+	}
+	@include medium-large{
+		left:-40px;
+	}
+	a{
+		height:40px;
+		width:40px;
+		i{
+			font-size:20px;
+			height:40px;
+			width:40px;
+			line-height:40px;
+		}
+	}
 }
