@@ -3,3 +3,8 @@ Telescope.modules.add("hero", {
   template: 'hello',
   order: 1
 });
+
+Telescope.modules.add("commentThreadBottom", {
+    template: 'post_subscribe_facebook',
+    order: 10
+});

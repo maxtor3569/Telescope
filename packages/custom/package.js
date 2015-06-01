@@ -33,6 +33,8 @@ Package.onUse(function (api) {
     // 'lib/client/templates/hello.js',
     // 'lib/client/templates/custom_post_title.html',
     // 'lib/client/templates/custom_post_title.js',
+     'lib/client/templates/facebook_like.html',
+     'lib/client/templates/facebook_like.js',
     'lib/client/stylesheets/custom.scss',
     'lib/client/custom_templates.js'
   ], ['client']);
