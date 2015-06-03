@@ -1,3 +1,69 @@
+header
+{
+    background-color: #84c5f4 !important;
+}
+
+/* Blue bubbles on messages. */
+
+.post-heading
+{
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-color: #0b93f6;
+	border-radius: 20px;
+	margin-right: 25px;
+}
+
+.post-title
+{
+	padding:  0px;
+	padding-left:  10px;
+	padding-right:  10px;
+	color: white !important;
+	display: inline-block;
+}
+
+/* Green bubbles on responses. */
+
+.comment-text
+{
+	background-color: #30c81e;
+	padding:  0px;
+	padding-left:  10px;
+	padding-right:  10px;
+	border-radius: 20px;
+	color: white !important;
+}
+
+/*  Upvote green. */
+.icon-upvote
+{
+	color: green !important;
+}
+
+/* Purple buttons. */
+.btn
+{
+	background-color: #b515e0;
+}
+.hero .copy .button
+{
+	background-color: #b515e0;
+	border-radius: 5px;	
+}
+
+/* Purple banners. */
+.error
+{
+	background-color: #b515e0;
+}
+
+/* Hide avatar circles on posts. */
+.post-avatars
+{
+	display: none;
+}
+
 .custom-hero-banner{
   text-align: center;
   color: purple;
