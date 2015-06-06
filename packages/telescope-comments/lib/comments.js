@@ -59,7 +59,6 @@ Comments.schema = new SimpleSchema({
     type: String,
     editableBy: ["member", "admin"],
     autoform: {
-      rows: 5
     }
   },
   /**
