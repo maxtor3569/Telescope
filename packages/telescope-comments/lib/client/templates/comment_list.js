@@ -1,7 +1,7 @@
 Template.comment_list.helpers({
   child_comments: function(){
     var post = this;
-    var comments = Comments.find({postId: post._id, parentCommentId: null}, {sort: {score: -1, postedAt: -1}}).map(function(comment, index){
+    var comments = Comments.find({postId: post._id, parentCommentId: null}, {sort: {upvotes: -1, postedAt: -1}}).map(function(comment, index){
       if (index == 0) {
         comment.first = true;
       } else {
