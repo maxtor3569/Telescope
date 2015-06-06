@@ -38,12 +38,12 @@ $red: #DD3416;
   .icon{
     color: white;
   }
-  @include small {
+  /*@include small {
     left: 50% !important;
     top: 40px !important;
     width: 185px;
     margin-left: -92px;
-  }
+  }*/
   // @include medium-large {
   //   left: -180px;
   //   top: 5px;
@@ -73,12 +73,6 @@ $red: #DD3416;
   &:after {
     border-color: rgba(0, 0, 0, 0);
     border-width: 10px;
-    @include small {
-      border-bottom-color: rgba(0,0,0,0.4);
-      top: -20px;
-      left: 50%;
-      margin-left: -11px;
-    }
     // @include medium-large {
     //   border-left-color: #ffffff;
     //   top: 20px;
