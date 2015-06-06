@@ -36,7 +36,7 @@
             }
         }
         a{
-          color: {{accentColor}};
+          color: 0b93f6;
           font-weight: bold;
           text-decoration: none;
         }
@@ -47,7 +47,7 @@
           border-radius: 3px;
         }
         .heading-container{
-          background: {{secondaryColor}};
+          background: #84c5f4;
           padding: 15px;
           text-align: center;
           border-radius: 3px 3px 0px 0px;
@@ -74,10 +74,10 @@
           margin: 0;
         }
         .footer-container{
-          background: #ddd;
+          background: #84c5f4;
           font-family: Helvetica, sans-serif;
           padding: 30px;
-          color: #777;
+          color: #84c5f4;
           border-radius: 0px 0px 3px 3px;
           font-size: 13px;
         }
@@ -91,6 +91,15 @@
           border-bottom: 1px solid #ddd;
           padding: 10px 0;
         }
+		.comment-text
+		{
+	    background-color: #30c81e ;
+	    padding:  0px;
+	    padding-left:  10px;
+    	padding-right:  10px;
+	    border-radius: 20px;
+	    color: white !important;
+	}
     </style>
 </head>
 <body style="margin:0; padding:10px 0;" bgcolor="#ebebeb" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -108,7 +117,7 @@
           <td class="heading-container">
             <a href="{{siteUrl}}">
               {{#if logoUrl}}
-                <img class="logo" src="{{logoUrl}}" height="{{logoHeight}}" width="{{logoWidth}}" alt="{{siteName}}"/>
+                <img class="logo" src="{{logoUrl}}" height="80" width="125" alt="{{siteName}}"/>
               {{else}}
                 {{siteName}}
               {{/if}}
@@ -125,7 +134,7 @@
         </tr>
         <tr>
           <td class="footer-container">
-            <a href="{{accountLink}}">Change your notifications settings</a><br/><br/>
+            <a href="{{accountLink}}">Change how often your receive these emails</a><br/><br/>
             {{{footer}}}
           </td>
         </tr>
