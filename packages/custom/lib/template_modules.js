@@ -11,5 +11,5 @@ Telescope.modules.add("commentThreadBottom", {
 
 Telescope.modules.add("commentThreadBottom", {
     template: 'post_subscribe_facebookscript',
-    order: 11
+    order: 9
 });
