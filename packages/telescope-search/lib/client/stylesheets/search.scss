@@ -38,11 +38,10 @@ $dark-grey:#444444;
   &.empty {
     .search-field {
       max-width: $compressed-width;
-      background: rgba(255, 255, 255, 0.1);
+      background: white;
+      color: #aaa;
       &:focus {
-        background: white;
         max-width: $expanded-width;
-        color: #aaa;
       }
     }
   }
