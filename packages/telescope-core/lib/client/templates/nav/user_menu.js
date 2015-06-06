@@ -17,9 +17,9 @@ Template.user_menu.helpers({
 });
 
 // Add click handler for the sign-in-as-guest link in the navbar.
-Template.user_menu.events({
-    'click #sign-in-as-guest': function(e)
-    { 
-      Meteor.loginWithPassword("guest@textie.co", "guestguest");
-    }
-});
+//Template.user_menu.events({
+    //'click #sign-in-as-guest': function(e)
+    //{ 
+      //Meteor.loginWithPassword("guest@textie.co", "guestguest");
+    //}
+//});

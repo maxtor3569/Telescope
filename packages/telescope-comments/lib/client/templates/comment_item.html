@@ -26,6 +26,11 @@
           {{#if isAdmin}}
             | <span>{{full_date}}</span>
           {{/if}}
+          {{#if first}}
+          <div class="top-comment">
+            <img src="/top_comment.png" height="40px">
+          </div>
+          {{/if}}
         </div>
         <div class="comment-main"> 
           <div class="comment-text markdown">{{{htmlBody}}}</div>
