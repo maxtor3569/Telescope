@@ -38,14 +38,23 @@ header
 
 /* Green bubbles on responses. */
 
+.comment-main {
+  display: inline-block;
+}
+
 .comment-text
 {
 	background-color: #30c81e;
-	padding:  0px;
+	padding-bottom:  5px;
+	padding-top:  5px;
 	padding-left:  10px;
 	padding-right:  10px;
 	border-radius: 20px;
 	color: white !important;
+}
+
+.comment-reply {
+  margin-left: 5px;
 }
 
 /*  Upvote green. */
