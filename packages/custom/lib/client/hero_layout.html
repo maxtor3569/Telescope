@@ -77,6 +77,13 @@
               Submit your Message!
             </a>
             <h4>Or suggest a reply to messages below.</h4>
+            {{#if isLoggedIn}}
+              {{> quickForm collection="Posts" id="submitPostForm" template="" input-col-class="controls" type="method" meteormethod="submitPost" fields="title"}}
+            {{else}}
+            <a class="button" href="/register">
+              Signup!
+            </a>
+            {{/if}}
           </div>
         </div>
       </section>
