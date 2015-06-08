@@ -39,7 +39,7 @@ Telescope.modules.add("profileEdit", {
 
 Telescope.modules.add("commentThreadBottom", {
   template: 'post_subscribe',
-  order: 10
+  order: 26
 });
 
 Posts.views.add("userSubscribedPosts", function (terms) {
