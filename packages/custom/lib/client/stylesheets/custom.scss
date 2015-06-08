@@ -158,9 +158,10 @@ header
 
 .top-comment {
   display: inline-block;
+		vertical-align: middle;
 }
 
-// fixing sharing
+// getting rid of weird sharing link
 .share-link {
     display: none;
 }
