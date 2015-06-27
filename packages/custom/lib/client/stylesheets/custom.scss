@@ -148,13 +148,15 @@ header
 		    z-index:9;
 	        @include small{
                 top: -18px;
-                left:calc(100% - 40px);
 		        border-top:9px solid #0B93F6;
 	        }
 	        @include medium-large{
                 top: -20px;
-                left:calc(100% - 40px);
 		        border-top:7px solid #0B93F6;
+            }
+            left:calc(100% - 40px);
+            _::-webkit-full-page-media, _:future, :root .safari_only {
+                left:calc(100% - 39px);
             }
 		    height:30px;
 		    border-right:20px solid #0B93F6;
@@ -170,11 +172,17 @@ header
 	        @include small{
                 top: -18px;
                 left:calc(100% - 48px);
+                _::-webkit-full-page-media, _:future, :root .safari_only {
+                    left:calc(100% - 47px);
+                }
 		        border-top:9px solid white;
 	        }
 	        @include medium-large{
                 top: -20px;
                 left:calc(100% - 49px);
+                _::-webkit-full-page-media, _:future, :root .safari_only {
+                    left:calc(100% - 48px);
+                }
 		        border-top:7px solid white;
             }
 		    height:20px;
