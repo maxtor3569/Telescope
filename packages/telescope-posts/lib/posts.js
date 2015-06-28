@@ -29,18 +29,29 @@ Posts.schema = new SimpleSchema({
       type: "bootstrap-datetimepicker"
     }
   },
-  /**
-    Title
-  */
+    /**
+      Title
+    */
   title: {
-    label: function () {
-      return "Message"
-    },
-    type: String,
-    optional: false,
-    editableBy: ["member", "admin"]
+      label: function () {
+          return "Message"
+      },
+      type: String,
+      optional: false,
+      editableBy: ["member", "admin"]
   },
-  /**
+    /**
+  Context
+*/
+  context: {
+      label: function () {
+          return "Back story (optional)"
+      },
+      type: String,
+      optional: true,
+      editableBy: ["member", "admin"]
+  },
+    /**
     Count of how many times the post's page was viewed
   */
   viewCount: {

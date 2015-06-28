@@ -42,6 +42,13 @@ Telescope.modules.add("postHeading", [
   }
 ]);
 
+Telescope.modules.add("postContext", [
+  {
+    template: 'post_context',
+    order: 10
+  },
+]);
+
 Telescope.modules.add("postMeta", [
   {
     template: 'post_author',

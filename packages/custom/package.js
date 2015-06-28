@@ -34,7 +34,9 @@ Package.onUse(function (api) {
     // 'lib/client/templates/custom_post_title.html',
     // 'lib/client/templates/custom_post_title.js',
     'lib/client/stylesheets/custom.scss',
-    'lib/client/custom_templates.js'
+    'lib/client/custom_templates.js',
+    'lib/client/templates/post_context.html',
+    'lib/client/templates/post_context.js'
   ], ['client']);
 
   api.addFiles([

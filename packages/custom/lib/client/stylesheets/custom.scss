@@ -141,7 +141,7 @@ header
     height: 100%;
     }
 @media screen and (-webkit-min-device-pixel-ratio:0) {  
-    .post-meta {
+    .posts-grid .post-meta {
 	    &:before {
 		    content:"";
 		    position:relative;
@@ -164,7 +164,7 @@ header
 		    -webkit-transform:translate(0, -2px);
 	    }
     }
-    .post-author {
+    .posts-grid .post-author {
 	    &:before {
 		    content:"";
 		    position:relative;
@@ -172,6 +172,56 @@ header
 	        @include small{
                 top: -18px;
                 left:calc(100% - 48px);
+                _::-webkit-full-page-media, _:future, :root .safari_only {
+                    left:calc(100% - 47px);
+                }
+		        border-top:9px solid white;
+	        }
+	        @include medium-large{
+                top: -20px;
+                left:calc(100% - 49px);
+                _::-webkit-full-page-media, _:future, :root .safari_only {
+                    left:calc(100% - 48px);
+                }
+		        border-top:7px solid white;
+            }
+		    height:20px;
+		    border-right:20px solid white;
+		    border-bottom-left-radius: 10px;
+		    -webkit-transform:translate(0, -2px);
+	    }
+    }
+    .posts-list .post-context {
+	    &:before {
+		    content:"";
+		    position:relative;
+		    z-index:9;
+	        @include small{
+                top: -18px;
+		        border-top:9px solid #0B93F6;
+	        }
+	        @include medium-large{
+                top: -20px;
+		        border-top:7px solid #0B93F6;
+            }
+            left:calc(100% - 40px);
+            _::-webkit-full-page-media, _:future, :root .safari_only {
+                left:calc(100% - 39px);
+            }
+		    height:30px;
+		    border-right:20px solid #0B93F6;
+		    border-bottom-left-radius: 20px;
+		    -webkit-transform:translate(0, -2px);
+	    }
+    }
+    .posts-list .post-contextinner {
+	    &:before {
+		    content:"";
+		    position:relative;
+		    z-index:11;
+	        @include small{
+                top: -18px;
+                left:calc(100% - 50px);
                 _::-webkit-full-page-media, _:future, :root .safari_only {
                     left:calc(100% - 47px);
                 }
@@ -199,6 +249,13 @@ header
 	padding-right:  10px;
 	color: white !important;
 	display: inline-block;
+}
+.posts-grid .post-context {
+    display: none;
+}
+.posts-list .post-context {
+	color: #444444;
+	font-size: 14px;
 }
 
 /* Green bubbles on responses. */
