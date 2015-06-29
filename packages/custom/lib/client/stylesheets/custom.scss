@@ -142,6 +142,7 @@ header
     }
 @media screen and (-webkit-min-device-pixel-ratio:0) {  
     .posts-grid .post-meta {
+        margin-left: -26px;
 	    &:before {
 		    content:"";
 		    position:relative;
@@ -253,9 +254,13 @@ header
 .posts-grid .post-context {
     display: none;
 }
+.posts-list .post-meta {
+    margin-left: 15px;
+}
 .posts-list .post-context {
 	color: #444444;
 	font-size: 14px;
+    margin-left: -29px;
 }
 
 /* Green bubbles on responses. */
