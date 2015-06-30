@@ -141,6 +141,7 @@ header
     height: 100%;
     }
 @media screen and (-webkit-min-device-pixel-ratio:0) {  
+// front page ticks
     .posts-grid .post-meta {
         margin-left: -26px;
 	    &:before {
@@ -192,6 +193,7 @@ header
 		    -webkit-transform:translate(0, -2px);
 	    }
     }
+// posts page ticks
     .posts-list .post-context {
 	    &:before {
 		    content:"";
@@ -199,13 +201,14 @@ header
 		    z-index:9;
 	        @include small{
                 top: -18px;
+                left:calc(100% - 39px);
 		        border-top:9px solid #0B93F6;
 	        }
 	        @include medium-large{
                 top: -20px;
+                left:calc(100% - 40px);
 		        border-top:7px solid #0B93F6;
             }
-            left:calc(100% - 40px);
             _::-webkit-full-page-media, _:future, :root .safari_only {
                 left:calc(100% - 39px);
             }
@@ -222,7 +225,7 @@ header
 		    z-index:11;
 	        @include small{
                 top: -18px;
-                left:calc(100% - 50px);
+                left:calc(100% - 49px);
                 _::-webkit-full-page-media, _:future, :root .safari_only {
                     left:calc(100% - 47px);
                 }
