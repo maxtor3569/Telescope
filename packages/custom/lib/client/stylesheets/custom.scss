@@ -327,3 +327,13 @@ header
 	    }
     }
 }
+
+.post-sharelinks {
+	    @include small{
+            display: block;
+	    }
+	    @include medium-large{
+            margin-left: 10px;
+        }
+
+}
