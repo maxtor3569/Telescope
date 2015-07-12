@@ -45,9 +45,29 @@ Template.registerHelper('formatDate', function(datetime, format) {
   return moment(datetime).format(format);
 });
 
-Template.registerHelper('timeAgo', function(datetime) {
-  Session.get('momentLocale'); // depend on session variable to reactively rerun the helper
-  return moment(datetime).fromNow();
+Template.registerHelper('timeAgo', function (datetime) {
+    Session.get('momentLocale'); // depend on session variable to reactively rerun the helper
+    return moment(datetime).fromNow();
+});
+
+Template.registerHelper('timeAgoShort', function (datetime) {
+    Session.get('momentLocale'); // depend on session variable to reactively rerun the helper
+    return moment(datetime).fromNow(true)
+      .replace('a few seconds', '0m')
+      .replace('a second', '1s')
+      .replace(' seconds', 's')
+      .replace(' minutes', 'm')
+      .replace('a minute', '1m')
+      .replace(' hours', 'h')
+      .replace('an hour', '1h')
+      .replace(' days', 'd')
+      .replace('a day', '1d')
+      .replace(' weeks', 'w')
+      .replace('a week', '1w')
+      .replace(' months', 'mth')
+      .replace('a month', '1mth')
+      .replace(' years', 'y')
+      .replace('a year', '1y');
 });
 
 Template.registerHelper('sanitize', function(content) {

@@ -10,10 +10,6 @@ Telescope.modules.add("postComponents", [
     order: 1
   },
   {
-    template: 'post_upvote',
-    order: 10
-  },
-  {
     template: 'post_content',
     order: 20
   },
@@ -21,14 +17,6 @@ Telescope.modules.add("postComponents", [
     template: 'post_avatars',
     order: 30
   },
-  {
-    template: 'post_discuss',
-    order: 40
-  },
-  {
-    template: 'post_actions',
-    order: 50
-  }
 ]);
 
 Telescope.modules.add("postHeading", [
@@ -52,18 +40,22 @@ Telescope.modules.add("postContext", [
 Telescope.modules.add("postMeta", [
   {
     template: 'post_author',
-    order: 10
+    order: 40
   },
   {
     template: 'post_info',
-    order: 20
-  },
-  {
-    template: 'post_comments_link',
     order: 30
   },
   {
     template: 'post_admin',
     order: 50
-  }
+  },
+  {
+    template: 'post_upvote',
+    order: 10
+  },
+  {
+    template: 'post_discuss',
+    order: 60
+  },
 ]);
