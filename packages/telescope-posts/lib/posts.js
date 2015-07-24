@@ -52,6 +52,22 @@ Posts.schema = new SimpleSchema({
       editableBy: ["member", "admin"]
   },
     /**
+      Whether the post is an admin message
+    */
+  isAdminMessage: {
+      label: function () {
+          return "Admin Message"
+      },
+      type: Boolean,
+      optional: true,
+      defaultValue: false,
+      editableBy: ["admin"],
+      autoform: {
+          group: 'admin',
+          leftLabel: "Admin Message"
+      }
+  },
+    /**
     Count of how many times the post's page was viewed
   */
   viewCount: {

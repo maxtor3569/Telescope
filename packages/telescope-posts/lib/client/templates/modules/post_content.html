@@ -1,14 +1,14 @@
 <template name="post_content">
     {{> modules "postThumbnail"}}
-    <div class="post-info">
-      <h3 class="post-heading">
-        {{> modules "postHeading"}}
-      </h3>
-      <div class="post-context">
-          <span class="post-contextinner"><span class="post-contextinnerinner">{{> modules "postContext"}}</span></span>
-      </div>
-      <div class="post-meta">
-        {{> modules "postMeta"}}
-      </div>
+    <div class="post-info{{adminMessage}}">
+        <h3 class="post-heading{{adminMessage}}">
+            {{> modules "postHeading"}}
+        </h3>
+        <div class="post-context">
+            <span class="post-contextinner"><span class="post-contextinnerinner">{{> modules "postContext"}}</span></span>
+        </div>
+        <div class="post-meta">
+            {{> modules "postMeta"}}
+        </div>
     </div>
 </template>
