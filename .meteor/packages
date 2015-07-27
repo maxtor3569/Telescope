@@ -39,3 +39,6 @@ telescope:update-prompt
 ############ Your Custom Packages ############
 
 my-custom-package
+peppelg:bootstrap-3-modal
+twbs:bootstrap
+msavin:mongol
