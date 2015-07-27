@@ -8,7 +8,7 @@ Package.describe({
 Package.onUse(function(api) {
 
   api.versionsFrom("METEOR@1.0");
-  
+
   var packages = [
     'telescope:lib@0.20.4', //  no dependencies
     'telescope:messages@0.20.4', // lib
@@ -21,7 +21,7 @@ Package.onUse(function(api) {
   ];
 
   api.use(packages);
-  
+
   api.imply(packages);
 
   api.addFiles([
@@ -74,7 +74,10 @@ Package.onUse(function(api) {
     'lib/client/templates/nav/user_menu.js',
     'lib/client/templates/menu/menu.scss',
     'lib/client/templates/menu/menu_component.html',
-    'lib/client/templates/menu/menu_component.js'
+    'lib/client/templates/menu/menu_component.js',
+    'lib/client/templates/modals/register_modal.html',
+    'lib/client/templates/modals/register_modal.js',
+    'lib/client/stylesheets/register.css',
   ], 'client');
 
   // static assets; needs cleanup
@@ -102,7 +105,9 @@ Package.onUse(function(api) {
   // ], 'client');
 
   api.addFiles([
-    'lib/server/start.js'
+    'lib/server/start.js',
+    'lib/server/createAccount.js',
+    'lib/server/social-config.js',
   ], ['server']);
 
   api.addFiles([

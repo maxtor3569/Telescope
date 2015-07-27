@@ -1,0 +1,24 @@
+@font-face {
+    font-family: elephant;
+    src: url(fonts/ELEPHNTI.TTF);
+}
+#at-btn-register{
+  background:#41ad48!important;
+  color:white;
+}
+#register-body-modal {
+  text-align:center;
+  color:#b3b5b8
+}
+#form-register .at-input {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 300px;
+  margin-bottom:8px;
+}
+#form-register input {
+  border-radius:7px;
+  border-width:1px;
+  height:37px
+}
