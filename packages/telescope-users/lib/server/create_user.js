@@ -3,7 +3,8 @@ Accounts.onCreateUser(function(options, user){
   // get facebook profile picture
   console.log(options);
   if (options.profile && options.anonyme != true  ) {
-        options.profile.picture = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=large";
+        if(user.services.facebook)
+          options.profile.picture = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=large";
         user.profile = options.profile;
     }
   return user;
