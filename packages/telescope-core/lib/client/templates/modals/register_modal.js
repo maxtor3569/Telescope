@@ -16,10 +16,10 @@ Template.register_modal.events({
     Meteor.call('createAccount', params, function (err) {
       if (err) {
         console.log(err);
+        jQuery('#errors-login').html(err.reason);
       }
       else {
         Meteor.loginWithPassword(email, password, function(err) {
-          console.log(err);
           Modal.hide('register_modal');
         });
       }
@@ -47,11 +47,14 @@ Template.register_modal.events({
         if( $('input[name=anonyme]').is(':checked') ){
           Meteor.call('anonymeUpdate');
         }
+        else {
+          Meteor.call('updateEmail');
+        }
       }
     });
   },
   'click #forgetPassword': function(e)
   {
-    Modal.hide('register_modal');  
+    Modal.hide('register_modal');
   }
 });

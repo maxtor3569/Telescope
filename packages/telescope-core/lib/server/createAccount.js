@@ -9,6 +9,7 @@ Meteor.methods({
     },
     'anonymeUpdate': function(params){
       var user = Meteor.userId();
+      var email = Meteor.user().services.facebook.email;
       Meteor.users.update(user, {
         $set:{
           'profile.name':null,
@@ -17,6 +18,25 @@ Meteor.methods({
           'services.facebook.name':null,
           'services.facebook.first_name':null,
           'services.facebook.last_name':null,
+          'services.facebook.link':null,
+
+        }
+      });
+      Meteor.users.update(user, {
+        $set:{
+          'telescope.email': email
+        }
+      });
+
+
+    },
+    // Fonction permit update email of telescope after facebook register
+    'updateEmail': function(params){
+      var user = Meteor.userId();
+      var email = Meteor.user().services.facebook.email;
+      Meteor.users.update(user, {
+        $set:{
+          'telescope.email': email
         }
       });
     }
