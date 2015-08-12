@@ -44,7 +44,7 @@ Template.register_modal.events({
       } else {
         Modal.hide('register_modal');
         // update field for anynmous case..
-        if( $('input[name=anonyme]').is(':checked') ){
+        if( $('input:radio[name=choice]:checked').val() == 'anonyme' ){
           Meteor.call('anonymeUpdate');
         }
         else {
