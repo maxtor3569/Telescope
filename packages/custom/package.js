@@ -36,7 +36,10 @@ Package.onUse(function (api) {
     'lib/client/stylesheets/custom.scss',
     'lib/client/custom_templates.js',
     'lib/client/templates/post_context.html',
-    'lib/client/templates/post_context.js'
+    'lib/client/templates/post_context.js',
+    'lib/client/templates/privacy_policy.html',
+    'lib/client/templates/privacy_policy.js',
+    'lib/client/privacy.js'
   ], ['client']);
 
   api.addFiles([
