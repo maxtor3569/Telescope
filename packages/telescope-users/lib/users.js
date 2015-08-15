@@ -48,6 +48,20 @@ Telescope.schemas.userData = new SimpleSchema({
     public: true,
     editableBy: ["member", "admin"]
   },
+  gender: {
+    type: String,
+    optional: true,
+    public: true,
+    label :"Gender",
+    editableBy: ["admin"]
+  },
+  birthday: {
+    type: String,
+    optional: true,
+    public: true,
+    label :"Birthday",
+    editableBy: ["admin"]
+  },
   /**
     An array containing comment downvotes
   */

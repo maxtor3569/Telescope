@@ -7,10 +7,14 @@
 // AccountsTemplates configuration
 //////////////////////////////////
 
+
+
 if (Meteor.isServer) {
   Meteor.startup(function () {
     Accounts.emailTemplates.siteName = Settings.get('title');
     Accounts.emailTemplates.from = Settings.get('defaultEmail');
+
+
   });
 }
 
@@ -67,10 +71,10 @@ AccountsTemplates.configureRoute('changePwd');
 AccountsTemplates.configure({
     enablePasswordChange: true,
     showForgotPasswordLink: true,
+    showAddRemoveServices: true,
     confirmPassword: false,
     overrideLoginErrors: true,
     lowercaseUsername: true,
-
     negativeFeedback: false,
     positiveFeedback: false,
     negativeValidation: true,

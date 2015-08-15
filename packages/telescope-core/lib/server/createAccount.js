@@ -15,6 +15,9 @@ Meteor.methods({
           'profile.name':null,
           'profile.picture':null,
           'telescope.displayName':null,
+          'telescope.birthday':null,
+          'telescope.gender':null,
+          'services.facebook.gender':null,
           'services.facebook.name':null,
           'services.facebook.first_name':null,
           'services.facebook.last_name':null,
@@ -42,6 +45,6 @@ Meteor.methods({
     }
 });
 // testing purpose;
-Meteor.publish("allUsers", function () {
+/*Meteor.publish("allUsers", function () {
    return Meteor.users.find();
- });
+ });*/
