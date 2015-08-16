@@ -11,7 +11,7 @@ Telescope.schemas.votes = new SimpleSchema({
     optional: true
   },
   votedAt: {
-    type: Date, 
+    type: Date,
     optional: true
   }
 });
@@ -47,6 +47,20 @@ Telescope.schemas.userData = new SimpleSchema({
     optional: true,
     public: true,
     editableBy: ["member", "admin"]
+  },
+  gender: {
+    type: String,
+    optional: true,
+    public: true,
+    label :"Gender",
+    editableBy: ["admin"]
+  },
+  birthday: {
+    type: String,
+    optional: true,
+    public: true,
+    label :"Birthday",
+    editableBy: ["admin"]
   },
   /**
     An array containing comment downvotes
@@ -164,7 +178,7 @@ Telescope.schemas.userData = new SimpleSchema({
  * Users schema
  * @type {SimpleSchema}
  */
-Users.schema = new SimpleSchema({ 
+Users.schema = new SimpleSchema({
   _id: {
     type: String,
     optional: true
@@ -249,7 +263,7 @@ Users.after.insert(function (userId, user) {
   if (Users.hasCompletedProfile(user)) {
     Telescope.callbacks.runAsync("profileCompletedAsync", user);
   }
-  
+
 });
 
 /**
@@ -273,8 +287,9 @@ Users.before.update(function (userId, doc, fieldNames, modifier) {
 
     // check for existing emails and throw error if necessary
     var userWithSameEmail = Users.findByEmail(newEmail);
-    if (userWithSameEmail && userWithSameEmail._id !== doc._id) {
-      throw new Meteor.Error(i18n.t("this_email_is_already_taken") + " (" + newEmail + ")");
+    if (userWithSameEmail && userWithSameEmail._id !== doc._id ) {
+      if(userWithSameEmail.services.facebook !=null)
+        throw new Meteor.Error(i18n.t("this_email_is_already_taken") + " (" + newEmail + ")");
     }
 
     // if user.emails exists, change it too

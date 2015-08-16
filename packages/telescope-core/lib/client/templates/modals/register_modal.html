@@ -1,0 +1,42 @@
+<template name="register_modal">
+  <div class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div id="register-body-modal" class="modal-body">
+          <h2 style="color:#00bff3 !important;font-family:elephant;font-size:19pt">{{_ "Sign up to textie anonymously"}}</h2>
+          <a class="btn btn-block btn-social btn-facebook" style="margin:auto;background:#4e69a2">
+            <i class="fa fa-facebook"></i> {{_ "Sign in with Facebook"}}
+          </a>
+          <div id="errors-login" style="color:red"></div>
+          <div style="margin:10px">
+            <input type="radio" name="choice" value="anonyme" style="margin-right:5px;"><span>{{_ "Keep me anonymous"}}</span>
+            <input type="radio" name="choice" value="name_photo_use" style="margin-right:5px;" checked><span>{{_ "Use my name & photo"}}</span>
+          </div>
+          <div style="margin-bottom:10px"> - or -</div>
+          <form id="form-register">
+          <div class="at-input">
+            <input type="email" name="email" pattern=".{4,}" title="4 characters minimum" placeholder="Email Address"
+            autocapitalize="none" autocorrect="off" required>
+          </div>
+          <div class="at-input">
+            <input type="text" name="username" placeholder="Alias (username)"
+            autocapitalize="none" autocorrect="off" pattern=".{4,}" title="4 characters minimum" required>
+          </div>
+          <div class="at-input">
+            <input type="password" name="password" placeholder="Password"
+            autocapitalize="none" autocorrect="off" pattern=".{4,}" title="4 characters minimum" required>
+          </div>
+          <div class="at-input">
+            <span> <a id="forgetPassword" href="{{pathFor "atForgotPwd"}}" style="font-size:9pt;color:#888888">{{_ "Forget your password ?"}} </a></span>
+            <button type="submit" class="at-btn submit" id="at-btn-register" style="float:right;width:135px">
+              {{_ "Sign Up"}}
+            </button>
+          </div>
+        </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</template>
