@@ -4,9 +4,9 @@
       <div class="modal-content">
 
         <div id="register-body-modal" class="modal-body">
-          <h2 style="color:#00bff3 !important;font-family:elephant;font-size:19pt">{{_ "Sign up to textie anonymously"}}</h2>
+          <h2 style="color:#00bff3 !important;font-family:elephant;font-size:19pt">{{_ "Join the Textie fun"}}</h2>
           <a class="btn btn-block btn-social btn-facebook" style="margin:auto;background:#4e69a2">
-            <i class="fa fa-facebook"></i> {{_ "Sign in with Facebook"}}
+            <i class="fa fa-facebook"></i> {{_ "Sign up with Facebook"}}
           </a>
           <div id="errors-login" style="color:red"></div>
           <div style="margin:10px">
@@ -27,12 +27,14 @@
             <input type="password" name="password" placeholder="Password"
             autocapitalize="none" autocorrect="off" pattern=".{4,}" title="4 characters minimum" required>
           </div>
-          <div class="at-input">
-            <span> <a id="forgetPassword" href="{{pathFor "atForgotPwd"}}" style="font-size:9pt;color:#888888">{{_ "Forget your password ?"}} </a></span>
-            <button type="submit" class="at-btn submit" id="at-btn-register" style="float:right;width:135px">
-              {{_ "Sign Up"}}
-            </button>
-          </div>
+            <div class="at-input">
+                <button type="submit" class="at-btn submit" id="at-btn-register" style="float:right;width:135px">
+                    {{_ "Sign Up"}}
+                </button>
+            </div>
+            <div class="at-input">
+                By clicking one of the sign-up buttons you agree to our <a href="https://textie.co/privacy">terms and conditions</a>.
+            </div>
         </form>
         </div>
 

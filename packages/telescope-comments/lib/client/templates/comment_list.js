@@ -1,7 +1,14 @@
 Template.comment_list.helpers({
   child_comments: function(){
-    var post = this;
-    var comments = Comments.find({postId: post._id, parentCommentId: null}, {sort: {upvotes: -1, postedAt: -1}}).map(function(comment, index){
+      var post = this;
+      var unmappedComments;
+      if (post.isAdmin) {
+          unmappedComments = Comments.find({ postId: post._id, parentCommentId: null, author: Meteor.user() }, { sort: { upvotes: -1, postedAt: -1 } });
+      }
+      else {
+          unmappedComments = Comments.find({ postId: post._id, parentCommentId: null }, { sort: { upvotes: -1, postedAt: -1 } });
+      }
+      var comments = unmappedComments.map(function (comment, index) {
       if (index == 0) {
         comment.first = true;
       } else {
