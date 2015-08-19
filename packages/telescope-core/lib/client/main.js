@@ -8,7 +8,7 @@ Meteor.startup(function () {
 // AutoForm.debug();
 
 Meteor.startup(function() {
-
+    console.log('ROOT_URL> ' + Meteor.absoluteUrl());
   var seoProperties = {
     meta: {},
     og: {}
