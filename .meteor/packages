@@ -44,3 +44,4 @@ twbs:bootstrap
 msavin:mongol
 accounts-facebook
 service-configuration
+force-ssl
