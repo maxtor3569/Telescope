@@ -79,3 +79,8 @@ Meteor.publish('postUsers', function(postId) {
   }
   return [];
 });
+
+// Publish trendings posts
+Meteor.publish('trendingPosts', function() {
+    return Posts.find({awesomeMessage:true});
+});
