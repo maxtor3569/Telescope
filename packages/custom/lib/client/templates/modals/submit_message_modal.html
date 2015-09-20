@@ -5,6 +5,14 @@
 
         <div id="register-body-modal" class="modal-body">
 
+          <div class="grid grid-module">
+
+            <form id="post_message">
+              {{> quickForm collection="Posts" id="submitPostForm" template="bootstrap3-horizontal" input-col-class="controls" type="method" meteormethod="submitPost" fields=postFields}}
+
+            </form>
+          </div>
+
 
 <!--           <h2 style="color:#00bff3 !important;font-family:elephant;font-size:19pt">{{_ "Join the Textie fun"}}</h2>
             <div class="at-input">

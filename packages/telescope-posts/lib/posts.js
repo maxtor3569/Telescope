@@ -37,19 +37,32 @@ Posts.schema = new SimpleSchema({
           return "Message"
       },
       type: String,
+      // placeholder: "schemaLabel",
       optional: false,
-      editableBy: ["member", "admin"]
+      editableBy: ["member", "admin"],
+      autoform: {
+        placeholder: "What text have you received?"
+      }
   },
-    /**
-  Context
-*/
-  context: {
-      label: function () {
-          return "Back story (optional)"
-      },
-      type: String,
-      optional: true,
-      editableBy: ["member", "admin"]
+  /*
+  Category for message/posting
+  */
+
+  category: {
+    label: "What sort of reply are you after?",
+    type: String,
+    optional: true,
+    editableBy: ["member", "admin"],
+    autoform: {
+      options: function () {
+        return Meteor.users.find().map(function (user) {
+          return {
+            value: user._id,
+            label: Users.getDisplayName(user)
+          };
+        });
+      }
+    }
   },
     /**
       Whether the post is an admin message
@@ -195,7 +208,7 @@ Posts.schema = new SimpleSchema({
     optional: true
   },
   /**
-    The post author's `_id`. 
+    The post author's `_id`.
   */
   userId: {
     type: String, // XXX

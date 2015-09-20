@@ -19,6 +19,6 @@ Template.user_menu.helpers({
 Template.user_menu.events({
     'click #registerLink': function(e)
     {
-      Modal.show('submit_message_modal');
+      Modal.show('register_modal');
     }
 });

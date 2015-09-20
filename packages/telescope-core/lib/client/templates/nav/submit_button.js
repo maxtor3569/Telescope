@@ -1,6 +1,6 @@
 Template.submit_button.events({
-    'click #submit': function(e)
+    'click #submit_message_modal': function(e)
     {
-      Modal.show('register_modal');
+      Modal.show('submit_message_modal');
     }
 });

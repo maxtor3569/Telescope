@@ -33,20 +33,20 @@ Package.onUse(function (api) {
     // 'lib/client/templates/hello.js',
     // 'lib/client/templates/custom_post_title.html',
     // 'lib/client/templates/custom_post_title.js',
+    'lib/client/templates/hero_layout.html',
+    'lib/client/templates/hero_layout.js',
     'lib/client/stylesheets/custom.scss',
     'lib/client/custom_templates.js',
     'lib/client/templates/post_context.html',
     'lib/client/templates/post_context.js',
     'lib/client/templates/privacy_policy.html',
     'lib/client/templates/privacy_policy.js',
-    'lib/client/templates/submit_message_modal.html',
-    'lib/client/templates/submit_message_modal.js',
+    'lib/client/templates/modals/submit_message_modal.html',
+    'lib/client/templates/modals/submit_message_modal.js',
     'lib/client/privacy.js'
   ], ['client']);
 
   api.addFiles([
-    'lib/client/hero_layout.html',
-    'lib/client/hero_layout.js',
     // 'lib/client/hero.html',
     // 'lib/client/hero.js',
     'lib/client/hero.scss'
