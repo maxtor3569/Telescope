@@ -3,7 +3,8 @@ Categories = new Mongo.Collection("categories");
 Categories.allow({
   insert: function (userId, doc) {
     // the user must be logged in, and the document must be owned by the user
-    return (userId && doc.owner === userId);
+    return true;
+    // return (userId && doc.owner === userId);
   },
   update: function (userId, doc, fields, modifier) {
     // can only change your own documents

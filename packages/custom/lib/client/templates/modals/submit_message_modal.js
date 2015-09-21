@@ -1,8 +1,12 @@
 Template.submit_message_modal.helpers({
   categories: function () {
 
+
     Categories.insert({
       name: 'test'
+    }, function (){
+      console.log('success');
+
     });
     return Categories.find({});
   }
