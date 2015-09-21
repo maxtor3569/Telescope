@@ -1,4 +1,7 @@
 <template name="post_category">
-  {{category}}
-  {{newCategory}}
+    {{#if newCategory}}
+      {{newCategory}}
+    {{else}}
+        {{category}}
+    {{/if}}
 </template>
