@@ -36,6 +36,7 @@ Posts.controllers.list = RouteController.extend({
   },
 
   getTitle: function () {
+    console.log(this.view)
     return i18n.t(this.view);
   },
 

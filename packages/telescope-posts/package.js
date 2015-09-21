@@ -41,6 +41,8 @@ Package.onUse(function (api) {
     'lib/client/templates/modules/post_author.html',
     'lib/client/templates/modules/post_avatars.html',
     'lib/client/templates/modules/post_avatars.js',
+    'lib/client/templates/modules/post_category.html',
+    'lib/client/templates/modules/post_category.js',
     'lib/client/templates/modules/post_comments_link.html',
     'lib/client/templates/modules/post_content.html',
     'lib/client/templates/modules/post_content.js',
