@@ -1,20 +1,10 @@
-// Template.submit_message_modal.events({
-//   'submit #post_message': function(e)
-//   {
-
-
-
-
-
-//   },
-
-//   // 'click #forgetPassword': function(e)
-//   // {
-//   //   Modal.hide('register_modal');
-//   // }
-// });
-
-
+Template.registerHelper("yearOptions", function() {
+    return [
+        {label: "2013", value: 2013},
+        {label: "2014", value: 2014},
+        {label: "2015", value: 2015}
+    ];
+});
 
 
 Template.submit_message_modal.helpers({
@@ -53,6 +43,7 @@ AutoForm.hooks({
       this.template.$('button[type=submit]').removeClass('loading');
       Events.track("new post", {'postId': post._id});
       Router.go('post_page', {_id: post._id});
+      Modal.hide('submit_message_modal');
     },
 
     onError: function(operation, error) {
@@ -64,6 +55,7 @@ AutoForm.hooks({
         var dupePostId = error.reason.split('|')[1];
         Router.go('post_page', {_id: dupePostId});
       }
+      Modal.hide('submit_message_modal');
     }
 
   }

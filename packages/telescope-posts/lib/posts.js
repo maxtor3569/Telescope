@@ -47,23 +47,39 @@ Posts.schema = new SimpleSchema({
   /*
   Category for message/posting
   */
-
   category: {
-    label: "What sort of reply are you after?",
     type: String,
-    optional: true,
     editableBy: ["member", "admin"],
+    allowedValues: ['nice', 'funny', 'sarcastic', 'dismissive', 'hurtful', 'intelligent', 'other'],
     autoform: {
-      options: function () {
-        return Meteor.users.find().map(function (user) {
-          return {
-            value: user._id,
-            label: Users.getDisplayName(user)
-          };
-        });
-      }
+      options: [
+        {label: "Nice", value: "nice"},
+        {label: "Funny", value: "funny"},
+        {label: "Sarcastic", value: "sarcastic"},
+        {label: "Dismissive (nice)", value: "dismissive"},
+        {label: "Hurtful", value: "hurtful"},
+        {label: "Intelligent", value: "intelligent"},
+        {label: "Other", value: "other"}
+      ]
     }
   },
+
+  // category: {
+  //   label: "What sort of reply are you after?",
+  //   type: String,
+  //   optional: true,
+  //   editableBy: ["member", "admin"],
+  //   autoform: {
+  //     options: function () {
+  //       return Meteor.categories.find().map(function (category) {
+  //         return {
+  //           value: category._id,
+  //           label: category.name
+  //         };
+  //       });
+  //     }
+  //   }
+  // },
     /**
       Whether the post is an admin message
     */

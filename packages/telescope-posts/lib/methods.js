@@ -113,6 +113,7 @@ Meteor.methods({
    */
   submitPost: function(post){
 
+    console.log('the post', post);
     // required properties:
     // title
 
