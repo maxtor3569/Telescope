@@ -37,7 +37,6 @@ Posts.schema = new SimpleSchema({
           return "Message"
       },
       type: String,
-      // placeholder: "schemaLabel",
       optional: false,
       editableBy: ["member", "admin"],
       autoform: {
@@ -62,6 +61,15 @@ Posts.schema = new SimpleSchema({
         {label: "Other", value: "other"}
       ]
     }
+  },
+
+  newCategory : {
+    type: String,
+    optional: false,
+    editableBy: ["member", "admin"],
+    autoform: {
+        placeholder: "What sort of reply are you after?"
+      }
   },
 
   // category: {

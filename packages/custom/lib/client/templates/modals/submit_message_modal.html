@@ -9,6 +9,12 @@
             <fieldset>
               {{> afQuickField name='title'}}
               {{> afFieldInput name="category" type="select-radio-inline"}}
+              {{#if afFieldValueIs name="category" value="other"}}
+                  {{> afQuickField name="newCategory"}}
+                {{/if}}
+
+
+
             </fieldset>
             <button type="submit" class="btn btn-primary">Submit</button>
           {{/autoForm}}
