@@ -437,7 +437,21 @@ header
 }
 
 #submit-body-modal{
-  background-color: grey;
+  background-color: #d3d3d3;
+
+  #postTitleModal{
+    border: 1px solid blue;
+
+  }
+  #postTitleModal label{
+    border: 1px solid red;
+
+  }
+
+  #postTitleModal input{
+    border: 1px solid red;
+
+  }
 
   .radio-inline {
     border: 1px solid white !important;
@@ -452,6 +466,11 @@ header
     padding-left: 31px !important;
     margin-left: 2% !important;
     margin-bottom: 10px !important;
+  }
+
+  #submitPostButton{
+    width: 20%;
+    margin-left: 33%;
   }
 
 }

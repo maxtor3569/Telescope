@@ -48,16 +48,17 @@ Posts.schema = new SimpleSchema({
   */
   category: {
     type: String,
+    optional: false,
     editableBy: ["member", "admin"],
-    allowedValues: ['nice', 'funny', 'sarcastic', 'dismissive', 'hurtful', 'intelligent', 'other'],
+    allowedValues: ['funny', 'calming', 'intriguing', 'polite', 'sarcastic', 'hurtful', 'other'],
     autoform: {
       options: [
-        {label: "Nice", value: "nice"},
         {label: "Funny", value: "funny"},
+        {label: "Calming", value: "calming"},
+        {label: "Intriguing", value: "intriguing"},
+        {label: "Polite 'no'", value: "polite"},
         {label: "Sarcastic", value: "sarcastic"},
-        {label: "Dismissive (nice)", value: "dismissive"},
         {label: "Hurtful", value: "hurtful"},
-        {label: "Intelligent", value: "intelligent"},
         {label: "Other", value: "other"}
       ]
     }

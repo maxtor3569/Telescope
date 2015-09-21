@@ -7,7 +7,9 @@
 
         {{#autoForm collection="Posts" id="submitPostForm" type="method" meteormethod="submitPost"}}
             <fieldset>
-              {{> afQuickField name='title'}}
+              <div id="postTitleModal">
+                {{> afQuickField name='title'}}
+              </div>
               {{> afFieldInput name="category" type="select-radio-inline"}}
               {{#if afFieldValueIs name="category" value="other"}}
                   {{> afQuickField name="newCategory"}}
@@ -16,7 +18,7 @@
 
 
             </fieldset>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" id="submitPostButton" class="submit btn header-submodule btn-primary">Post</button>
           {{/autoForm}}
 
 
