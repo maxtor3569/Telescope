@@ -1,9 +1,11 @@
-Template.registerHelper("yearOptions", function() {
-    return [
-        {label: "2013", value: 2013},
-        {label: "2014", value: 2014},
-        {label: "2015", value: 2015}
-    ];
+Template.submit_message_modal.helpers({
+  categories: function () {
+
+    Categories.insert({
+      name: 'test'
+    });
+    return Categories.find({});
+  }
 });
 
 

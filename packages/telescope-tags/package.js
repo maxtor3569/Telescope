@@ -13,6 +13,7 @@ Package.onUse(function (api) {
 
   api.addFiles([
     'lib/categories.js',
+    'lib/namespace.js',
     'lib/custom_fields.js',
     'lib/hooks.js',
     'package-tap.i18n'

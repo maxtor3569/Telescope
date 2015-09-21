@@ -22,6 +22,7 @@ Package.onUse(function (api) {
 
   api.addFiles([
     'lib/custom_fields.js',
+    'lib/custom_namespace.js',
     'lib/template_modules.js',
     'lib/callbacks.js'
   ], ['client', 'server']);
