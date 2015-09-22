@@ -52,17 +52,6 @@ Posts.schema = new SimpleSchema({
     optional: false,
     editableBy: ["member", "admin"],
     allowedValues: ['funny', 'calming', 'intriguing', 'polite', 'sarcastic', 'hurtful', 'other'],
-    // autoform: {
-    //     options: function () {
-    //       // Categories.insert({name : 'One', order :1});
-    //       return Meteor.categories.find().map(function (category) {
-    //         return {
-    //           value: category._id,
-    //           label: category.name
-    //         };
-    //       });
-    //     }
-    // }
     autoform: {
       options: [
         {label: "Funny", value: "funny"},
@@ -74,6 +63,17 @@ Posts.schema = new SimpleSchema({
         {label: "Other", value: "other"}
       ]
     }
+    // autoform: {
+    //     options: function () {
+    //       // Categories.insert({name : 'One', order :1});
+    //       return Meteor.categories.find().map(function (category) {
+    //         return {
+    //           value: category._id,
+    //           label: category.name
+    //         };
+    //       });
+    //     }
+    // }
   },
 
   newCategory : {
@@ -85,22 +85,6 @@ Posts.schema = new SimpleSchema({
       }
   },
 
-  // category: {
-  //   label: "What sort of reply are you after?",
-  //   type: String,
-  //   optional: true,
-  //   editableBy: ["member", "admin"],
-  //   autoform: {
-  //     options: function () {
-  //       return Meteor.categories.find().map(function (category) {
-  //         return {
-  //           value: category._id,
-  //           label: category.name
-  //         };
-  //       });
-  //     }
-  //   }
-  // },
     /**
       Whether the post is an admin message
     */

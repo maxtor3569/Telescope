@@ -63,7 +63,7 @@ AutoForm.hooks({
 
     onError: function(operation, error) {
       this.template.$('button[type=submit]').removeClass('loading');
-      Messages.flash(error.message.split('|')[0], 'error'); // workaround because error.details returns undefined
+      // Messages.flash(error.message.split('|')[0], 'error'); // workaround because error.details returns undefined
       Messages.clearSeen();
       // $(e.target).removeClass('disabled');
       if (error.error === 603) {
