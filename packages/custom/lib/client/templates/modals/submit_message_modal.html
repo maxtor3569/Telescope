@@ -9,10 +9,18 @@
               <div id="postTitleModal">
                 {{> afQuickField name='title'}}
               </div>
-              {{> afFieldInput name="category" type="select-radio-inline"}}
-              {{#if afFieldValueIs name="category" value="other"}}
-                  {{> afQuickField name="newCategory"}}
-                {{/if}}
+              <div id="catgoryContainer">
+                <div id="categoryLabel">
+                  <label>What sort of reply are you after?</label>
+                </div>
+                <div id="categorySelection">
+                  {{> afFieldInput id="catBox" name="category" type="select-radio-inline"}}
+                  {{#if afFieldValueIs name="category" value="other"}}
+                    {{> afQuickField name="newCategory"}}
+                  {{/if}}
+
+                </div>
+              </div>
             </fieldset>
             <button type="submit" id="submitPostButton" class="submit btn header-submodule btn-primary">Post</button>
           {{/autoForm}}

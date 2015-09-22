@@ -168,6 +168,15 @@ header
     vertical-align: bottom;
     height: 100%;
 }
+
+#categorySubheading{
+  margin-left: 1% !important;
+  margin-top: -2% !important;
+  @include small{
+      margin-top: -3% !important;
+    }
+}
+
 .post-heading-admin {
     @extend .post-heading;
 	background:#b515e0;
@@ -437,41 +446,77 @@ header
 }
 
 #submit-body-modal{
-  background-color: #d3d3d3;
+  background-color: #e4e4e4;
 
   #postTitleModal{
-    border: 1px solid blue;
+
 
   }
   #postTitleModal label{
-    border: 1px solid red;
+    margin-left: 4% !important;
 
   }
 
   #postTitleModal input{
-    border: 1px solid red;
+    display: inline !important;
+    width: 69% !important;
+    margin-left: 14% !important;
 
   }
 
-  .radio-inline {
-    border: 1px solid white !important;
-    display: block !important;
-    text-align: left !important;
-    font-size: 1.1em !important;
-    width: 33%;
-    height: 30px;
-    background-color: white;
-    border-radius: 5px;
-    padding-top: 5px !important;
-    padding-left: 31px !important;
-    margin-left: 2% !important;
-    margin-bottom: 10px !important;
+  #catgoryContainer{
+    display: inline-block;
+    width: 100%;
+
+
+    #categoryLabel{
+      display: inline-block !important;
+      width: 17% !important;
+      float: left;
+      margin-left: 4%;
+    }
+
+
+
+    #categorySelection{
+      display: inline-block !important;
+      width: 70% !important;
+      margin-left: 8% !important;
+
+    }
+
+    .radio-inline {
+      // border: 1px solid white !important;
+      display: block !important;
+      text-align: left !important;
+      font-size: 1.1em !important;
+      width: 40%;
+      height: 30px;
+      background-color: white;
+      border-radius: 5px;
+      line-height: 30px;
+      padding-left: 31px !important;
+      margin-left: 2% !important;
+      margin-bottom: 10px !important;
+    }
   }
 
   #submitPostButton{
-    width: 20%;
-    margin-left: 33%;
+    width: 28%;
+    margin-left: 30%;
+    margin-top: 2%;
   }
 
 }
 
+input[type="radio"] {
+    -webkit-appearance: checkbox; /* Chrome, Safari, Opera */
+    -moz-appearance: checkbox;    /* Firefox */
+    -ms-appearance: checkbox;     /* not currently supported */
+    margin-right: 10px !important;
+    position: inherit !important;
+}
+
+#chosen{
+  border: 1px solid grey !important;
+}

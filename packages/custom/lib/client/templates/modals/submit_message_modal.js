@@ -1,7 +1,6 @@
 Template.submit_message_modal.helpers({
   categories: function () {
 
-
     Categories.insert({
       name: 'test'
     }, function (){
@@ -9,7 +8,21 @@ Template.submit_message_modal.helpers({
 
     });
     return Categories.find({});
-  }
+  },
+
+});
+
+Template.submit_message_modal.events({
+  'click input#catBox': function (){
+    var arrayOfBoxes = document.querySelectorAll(".radio-inline");
+    var empty = [];
+    empty.forEach.call(arrayOfBoxes, function (arrayOfBoxes){
+      arrayOfBoxes.id ="" ;
+    })
+    event.path[1].setAttribute("id", "chosen")
+  },
+
+
 });
 
 

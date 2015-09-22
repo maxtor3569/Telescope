@@ -48,6 +48,8 @@ Posts.schema = new SimpleSchema({
   */
   category: {
     type: String,
+    label: "What sort of reply are you after?",
+    optional: true,
     editableBy: ["member", "admin"],
     allowedValues: ['funny', 'calming', 'intriguing', 'polite', 'sarcastic', 'hurtful', 'other'],
     // autoform: {
@@ -76,6 +78,7 @@ Posts.schema = new SimpleSchema({
 
   newCategory : {
     type: String,
+    optional: true,
     editableBy: ["member", "admin"],
     autoform: {
         placeholder: "What sort of reply are you after?"

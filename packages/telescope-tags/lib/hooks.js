@@ -13,7 +13,7 @@ Telescope.modules.add("postHeading", {
 // push "categories_menu" template to primaryNav
 Telescope.modules.add("primaryNav", {
   template: 'categories_menu',
-  order: 50
+  order: 10
 });
 
 Telescope.modules.add("mobileNav", {
