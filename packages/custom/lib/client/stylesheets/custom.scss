@@ -492,14 +492,14 @@ header
     .radio-inline {
       // border: 1px solid white !important;
       display: block !important;
-      text-align: left !important;
+      text-align: center;
       font-size: 1.1em !important;
       width: 40%;
       height: 30px;
       background-color: white;
       border-radius: 5px;
       line-height: 30px;
-      padding-left: 31px !important;
+      padding-left: 0px !important;
       margin-left: 2% !important;
       margin-bottom: 10px !important;
     }
@@ -508,19 +508,48 @@ header
   #submitPostButton{
     width: 28%;
     margin-left: 30%;
-    margin-top: 2%;
+    margin-top: -4%;
   }
 
 }
 
-input[type="radio"] {
-    // -webkit-appearance: checkbox; /* Chrome, Safari, Opera */
-    // -moz-appearance: checkbox;    /* Firefox */
-    // -ms-appearance: checkbox;     /* not currently supported */
-    margin-right: 10px !important;
-    position: inherit !important;
-}
+// input[type="radio"] {
+//     margin-right: 10px !important;
+//     position: inherit !important;
+// }
+
+
 
 #chosen{
   border: 1px solid grey !important;
+  background-color: #337ab7 !important;
+  color: white;
+}
+
+input[type=radio],
+input[type=checkbox]{
+
+  visibility: hidden;
+  position: absolute;
+}
+input[type=radio] + label:before,
+input[type=checkbox] + label:before{
+  height:12px;
+  width:12px;
+  margin-right: 2px;
+  content: " ";
+  display:inline-block;
+  vertical-align: baseline;
+  border:1px solid #777;
+}
+input[type=radio]:checked + label:before,
+input[type=checkbox]:checked + label:before{
+  background:gold;
+}
+
+input[type=radio] + label:before{
+  border-radius:50%;
+}
+input[type=checkbox] + label:before{
+  border-radius:2px;
 }

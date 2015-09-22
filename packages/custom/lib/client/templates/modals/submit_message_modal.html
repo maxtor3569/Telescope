@@ -14,9 +14,10 @@
                   <label>What sort of reply are you after?</label>
                 </div>
                 <div id="categorySelection">
-                  {{> afFieldInput id="catBox" name="category" type="select-radio-inline"}}
+                  {{> afFieldInput id="catBox" name="category" class="has-error" type="select-radio-inline"}}
+                    <img />
                   {{#if afFieldValueIs name="category" value="other"}}
-                    {{> afQuickField name="newCategory"}}
+                    {{> afQuickField id="newCatBox" name="newCategory"}}<img />
                   {{/if}}
 
                 </div>

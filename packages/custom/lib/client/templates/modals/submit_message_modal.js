@@ -1,12 +1,5 @@
 Template.submit_message_modal.helpers({
   categories: function () {
-
-    Categories.insert({
-      name: 'test'
-    }, function (){
-      console.log('success');
-
-    });
     return Categories.find({});
   },
 
@@ -21,6 +14,9 @@ Template.submit_message_modal.events({
     })
     event.path[1].setAttribute("id", "chosen")
   },
+  'click button' : function (){
+
+  }
 
 
 });
@@ -74,7 +70,7 @@ AutoForm.hooks({
         var dupePostId = error.reason.split('|')[1];
         Router.go('post_page', {_id: dupePostId});
       }
-      Modal.hide('submit_message_modal');
+      // Modal.hide('submit_message_modal');
     }
 
   }

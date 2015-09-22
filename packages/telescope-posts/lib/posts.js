@@ -49,7 +49,7 @@ Posts.schema = new SimpleSchema({
   category: {
     type: String,
     label: "What sort of reply are you after?",
-    optional: true,
+    optional: false,
     editableBy: ["member", "admin"],
     allowedValues: ['funny', 'calming', 'intriguing', 'polite', 'sarcastic', 'hurtful', 'other'],
     // autoform: {
@@ -81,7 +81,7 @@ Posts.schema = new SimpleSchema({
     optional: true,
     editableBy: ["member", "admin"],
     autoform: {
-        placeholder: "What sort of reply are you after?"
+        placeholder: "What sort of reply are you after? *"
       }
   },
 
@@ -264,6 +264,8 @@ Posts.schema = new SimpleSchema({
     }
   }
 });
+
+
 
 // schema transforms
 Posts.schema.internationalize();
