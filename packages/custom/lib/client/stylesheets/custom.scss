@@ -483,6 +483,10 @@ header
       width: 70% !important;
       margin-left: 8% !important;
 
+      .form-group label{
+        display: none;
+      }
+
     }
 
     .radio-inline {
@@ -510,9 +514,9 @@ header
 }
 
 input[type="radio"] {
-    -webkit-appearance: checkbox; /* Chrome, Safari, Opera */
-    -moz-appearance: checkbox;    /* Firefox */
-    -ms-appearance: checkbox;     /* not currently supported */
+    // -webkit-appearance: checkbox; /* Chrome, Safari, Opera */
+    // -moz-appearance: checkbox;    /* Firefox */
+    // -ms-appearance: checkbox;     /* not currently supported */
     margin-right: 10px !important;
     position: inherit !important;
 }
