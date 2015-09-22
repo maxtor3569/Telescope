@@ -50,6 +50,17 @@ Posts.schema = new SimpleSchema({
     type: String,
     editableBy: ["member", "admin"],
     allowedValues: ['funny', 'calming', 'intriguing', 'polite', 'sarcastic', 'hurtful', 'other'],
+    // autoform: {
+    //     options: function () {
+    //       // Categories.insert({name : 'One', order :1});
+    //       return Meteor.categories.find().map(function (category) {
+    //         return {
+    //           value: category._id,
+    //           label: category.name
+    //         };
+    //       });
+    //     }
+    // }
     autoform: {
       options: [
         {label: "Funny", value: "funny"},
