@@ -44,6 +44,8 @@ Package.onUse(function (api) {
 
   api.addFiles([
     'lib/client/hero_layout.html',
+    'lib/client/templates/trending_posts.html',
+    'lib/client/templates/trending_posts.js',
     'lib/client/hero_layout.js',
     // 'lib/client/hero.html',
     // 'lib/client/hero.js',

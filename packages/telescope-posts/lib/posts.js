@@ -195,7 +195,16 @@ Posts.schema = new SimpleSchema({
     optional: true
   },
   /**
-    The post author's `_id`. 
+    Message Awesome or not? (Admin)
+  */
+  awesomeMessage: {
+    type: Boolean,
+    label:"Awesome message",
+    optional: true,
+    editableBy: ["admin"],
+  },
+  /**
+    The post author's `_id`.
   */
   userId: {
     type: String, // XXX
