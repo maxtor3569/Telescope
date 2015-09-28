@@ -57,7 +57,7 @@ Posts.schema = new SimpleSchema({
         {label: "Funny", value: "funny"},
         {label: "Calming", value: "calming"},
         {label: "Intriguing", value: "intriguing"},
-        {label: "Polite 'no'", value: "polite"},
+        {label: "Polite 'no'", value: "polite 'no'"},
         {label: "Sarcastic", value: "sarcastic"},
         {label: "Hurtful", value: "hurtful"},
         {label: "Other", value: "other"}
