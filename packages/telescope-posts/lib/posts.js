@@ -51,13 +51,13 @@ Posts.schema = new SimpleSchema({
     label: "What sort of reply are you after?",
     optional: false,
     editableBy: ["member", "admin"],
-    allowedValues: ['funny', 'calming', 'intriguing', 'polite', 'sarcastic', 'hurtful', 'other'],
+    allowedValues: ['funny', 'calming', 'intriguing', "polite 'no'", 'sarcastic', 'hurtful', 'other'],
     autoform: {
       options: [
         {label: "Funny", value: "funny"},
         {label: "Calming", value: "calming"},
         {label: "Intriguing", value: "intriguing"},
-        {label: "Polite 'no'", value: "polite 'no'"},
+        {label: "Polite 'No'", value: "polite 'no'"},
         {label: "Sarcastic", value: "sarcastic"},
         {label: "Hurtful", value: "hurtful"},
         {label: "Other", value: "other"}
