@@ -1,3 +1,4 @@
 <template name="post_author">
   <a class="post-author" href="{{getProfileUrl userId}}">{{getDisplayName userId}}</a>
+  {{#if postedAt}}<span class="post-time">{{timeAgoShort postedAt}}</span>{{/if}}
 </template>

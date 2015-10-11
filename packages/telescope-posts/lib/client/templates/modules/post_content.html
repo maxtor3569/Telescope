@@ -1,14 +1,25 @@
 <template name="post_content">
     {{> modules "postThumbnail"}}
     <div class="post-info">
-      <h3 class="post-heading">
-        {{> modules "postHeading"}}
-      </h3>
+      <div>
+        <div style="float: left;position: relative;top: 17px;left: 18px;">
+          <a href="{{getProfileUrl userId}}" class="avatar-link avatar-small author-avatar">
+            {{> avatar userId=userId shape="circle"}}
+          </a>
+        </div>
+        <h3 class="post-heading">
+          {{> modules "postHeading"}}
+          {{> post_discuss }}
+        </h3>
+      </div>
       <div class="post-context">
           <span class="post-contextinner"><span class="post-contextinnerinner">{{> modules "postContext"}}</span></span>
       </div>
-      <div class="post-meta">
-        {{> modules "postMeta"}}
+      <div style="clear: both;height: 24px;text-align: left;width: 100%;">
+        {{> post_author }}
       </div>
+      <!-- <div class="post-meta">
+        {{> modules "postMeta"}}
+      </div> -->
     </div>
 </template>
