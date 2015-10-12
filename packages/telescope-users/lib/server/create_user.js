@@ -12,7 +12,8 @@ Accounts.onCreateUser(function(options, user){
           if(user.services.facebook.gender)
             user.telescope.gender = user.services.facebook.gender;
         }
-        user.telescope.email = user.services.facebook.email;
+        if(user.telescope)
+          user.telescope.email = user.services.facebook.email;
         user.profile = options.profile;
     }
 
