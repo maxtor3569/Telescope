@@ -34,6 +34,10 @@ Package.onUse(function (api) {
     // 'lib/client/templates/hello.js',
     // 'lib/client/templates/custom_post_title.html',
     // 'lib/client/templates/custom_post_title.js',
+    'lib/client/templates/hero_layout.html',
+    'lib/client/templates/hero_layout.js',
+    'lib/client/hero_layout.js',
+    'lib/client/hero.scss',
     'lib/client/stylesheets/custom.scss',
     'lib/client/custom_templates.js',
     'lib/client/templates/post_context.html',
@@ -42,18 +46,19 @@ Package.onUse(function (api) {
     'lib/client/templates/privacy_policy.js',
     'lib/client/templates/modals/submit_message_modal.html',
     'lib/client/templates/modals/submit_message_modal.js',
-    'lib/client/privacy.js'
+    'lib/client/privacy.js',
+    'lib/client/templates/trending_posts.html',
+    'lib/client/templates/trending_posts.js'
   ], ['client']);
 
-  api.addFiles([
-    'lib/client/hero_layout.html',
-    'lib/client/templates/trending_posts.html',
-    'lib/client/templates/trending_posts.js',
-    'lib/client/hero_layout.js',
-    // 'lib/client/hero.html',
-    // 'lib/client/hero.js',
-    'lib/client/hero.scss'
-  ], 'client');
+//   api.addFiles([
+// <<<<<<< HEAD
+// =======
+//     // 'lib/client/hero_layout.html',
+// >>>>>>> 8c2de4b27aa51033c145b2179eddf179e278d084
+//     // 'lib/client/hero.html',
+//     // 'lib/client/hero.js',
+//   ], 'client');
 
 
   // server
