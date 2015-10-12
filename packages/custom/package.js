@@ -36,7 +36,7 @@ Package.onUse(function (api) {
     // 'lib/client/templates/custom_post_title.js',
     'lib/client/templates/hero_layout.html',
     'lib/client/templates/hero_layout.js',
-    'lib/client/hero_layout.js',
+    // 'lib/client/hero_layout.js',
     'lib/client/hero.scss',
     'lib/client/stylesheets/custom.scss',
     'lib/client/custom_templates.js',
@@ -50,16 +50,6 @@ Package.onUse(function (api) {
     'lib/client/templates/trending_posts.html',
     'lib/client/templates/trending_posts.js'
   ], ['client']);
-
-//   api.addFiles([
-// <<<<<<< HEAD
-// =======
-//     // 'lib/client/hero_layout.html',
-// >>>>>>> 8c2de4b27aa51033c145b2179eddf179e278d084
-//     // 'lib/client/hero.html',
-//     // 'lib/client/hero.js',
-//   ], 'client');
-
 
   // server
 

@@ -2,6 +2,8 @@
 Meteor.startup(function() {
   Template.hero_layout.replaces('layout');
 
+  Meteor.subscribe('trendingPosts');
+
   Template.layout.events({
     // 'click ' : function(e){
 
