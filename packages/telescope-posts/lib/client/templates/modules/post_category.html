@@ -1,7 +1,9 @@
 <template name="post_category">
     {{#if newCategory}}
-      <h5 id="categorySubheading">A {{newCategory}} response is wanted for this text.</h5>
+    A {{newCategory}} response is wanted for this text.
+    {{else}} {{#if category}}
+    A {{category}} response is wanted for this text.
     {{else}}
-      <h5 id="categorySubheading">A {{category}} response is wanted for this text.</h5>
-    {{/if}}
+    {{> modules "postContext"}}
+    {{/if}}{{/if}}
 </template>
