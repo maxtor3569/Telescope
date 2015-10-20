@@ -9,17 +9,19 @@ Package.onUse(function (api) {
 
   api.versionsFrom("METEOR@1.0");
 
-  api.use(['telescope:core@0.20.4']);
+  // api.use(['telescope:core@0.20.4']);
 
   api.addFiles([
     'lib/categories.js',
+    'lib/namespace.js',
     'lib/custom_fields.js',
     'lib/hooks.js',
+    'lib/parameters.js',
+    'lib/routes.js',
     'package-tap.i18n'
   ], ['client', 'server']);
 
   api.addFiles([
-    'lib/client/routes.js',
     'lib/client/scss/categories.scss',
     'lib/client/templates/categories.html',
     'lib/client/templates/categories.js',
@@ -49,7 +51,7 @@ Package.onUse(function (api) {
     "i18n/zh-CN.i18n.json",
   ], ["client", "server"]);
 
-  api.export([
+  api.export(
     'Categories'
-  ]);
+  );
 });

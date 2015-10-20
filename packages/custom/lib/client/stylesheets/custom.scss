@@ -30,13 +30,14 @@ header
 .hero .copy .button
 {
 	background-color: #b515e0;
-	border-radius: 5px;	
+	border-radius: 5px;
 }
 
 /* Purple banners. */
 .error
 {
-	background-color: #b515e0;
+	// background-color: #b515e0;
+  display: none;
 }
 
 /* Hide avatar circles on posts. */
@@ -157,7 +158,7 @@ header
 
 .post-heading {
 	padding:7px 7px;
-	color:white; 
+	color:white;
 	background:#0B93F6;
 	border-radius:25px;
 	margin-right: 25px;
@@ -168,6 +169,15 @@ header
     vertical-align: bottom;
     height: 100%;
 }
+
+#categorySubheading{
+  margin-left: 1% !important;
+  margin-top: -2% !important;
+  @include small{
+      margin-top: -3% !important;
+    }
+}
+
 .post-heading-admin {
     @extend .post-heading;
 	background:#b515e0;
@@ -187,7 +197,7 @@ header
     @extend .post-info;
 		padding: 10px;
 }
-@media screen and (-webkit-min-device-pixel-ratio:0) {  
+@media screen and (-webkit-min-device-pixel-ratio:0) {
 // front page ticks
     .posts-grid .post-meta {
         margin-left: -26px;
@@ -397,8 +407,8 @@ header
         padding-top: 7px;
         padding-bottom: 5px;
     }
-	
-    @media screen and (-webkit-min-device-pixel-ratio:0) {  
+
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
 	    &:before {
 		    content:"";
 		    position:absolute;
@@ -435,3 +445,118 @@ header
         }
 
 }
+
+#submit-body-modal{
+  background-color: #e4e4e4;
+
+  #postTitleModal{
+
+
+  }
+  #postTitleModal label{
+    margin-left: 4% !important;
+
+  }
+
+  #postTitleModal input{
+    display: inline !important;
+    width: 69% !important;
+    margin-left: 14% !important;
+
+  }
+
+  #catgoryContainer{
+    display: inline-block;
+    width: 100%;
+
+
+    #categoryLabel{
+      display: inline-block !important;
+      width: 17% !important;
+      float: left;
+      margin-left: 4%;
+    }
+
+
+
+    #categorySelection{
+      display: inline-block !important;
+      width: 70% !important;
+      margin-left: 8% !important;
+
+      .form-group label{
+        display: none;
+      }
+
+
+      input[type=radio],
+      input[type=checkbox]{
+
+        visibility: hidden;
+        position: absolute;
+      }
+      input[type=radio] + label:before,
+      input[type=checkbox] + label:before{
+        height:12px;
+        width:12px;
+        margin-right: 2px;
+        content: " ";
+        display:inline-block;
+        vertical-align: baseline;
+        border:1px solid #777;
+      }
+      input[type=radio]:checked + label:before,
+      input[type=checkbox]:checked + label:before{
+        background:gold;
+      }
+
+      input[type=radio] + label:before{
+        border-radius:50%;
+      }
+      input[type=checkbox] + label:before{
+        border-radius:2px;
+      }
+
+
+
+
+
+    }
+
+    .radio-inline {
+      // border: 1px solid white !important;
+      display: block !important;
+      text-align: center;
+      font-size: 1.1em !important;
+      width: 40%;
+      height: 30px;
+      background-color: white;
+      border-radius: 5px;
+      line-height: 30px;
+      padding-left: 0px !important;
+      margin-left: 2% !important;
+      margin-bottom: 10px !important;
+    }
+  }
+
+  #submitPostButton{
+    width: 28%;
+    margin-left: 30%;
+    // margin-top: -4%;
+  }
+
+}
+
+// input[type="radio"] {
+//     margin-right: 10px !important;
+//     position: inherit !important;
+// }
+
+
+
+#chosen{
+  border: 1px solid grey !important;
+  background-color: #337ab7 !important;
+  color: white;
+}
+
