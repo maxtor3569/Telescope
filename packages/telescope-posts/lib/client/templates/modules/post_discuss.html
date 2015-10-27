@@ -1,9 +1,10 @@
 <template name="post_discuss">
     <span class="post-discuss2">
         <a class="discuss-link go-to-comments action" href="/posts/{{_id}}" title="{{_ 'discuss'}}">
-            {{{icon "comment"}}}
+            <img src="Bubble.png" style="width:30px;height:30px;" />
             <span class="action-count">{{commentCount}}</span>
             <span class="sr-only"> {{_ "comments"}}</span>
         </a>
     </span>
+    <div style="clear:both"></div>
 </template>

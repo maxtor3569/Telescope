@@ -128,7 +128,7 @@ header
 	}
 	.action-count {
 	  position: absolute;
-	  top: 2px;
+	  top: 5px;
       left: 0px;
 	  display: block;
 	  width: 100%;
@@ -426,4 +426,4 @@ header
 }
 .post-meta-item {}
 .post-context {display:none;}
-.post-discuss2 .action {background: white}
+.post-discuss2 .action {float:right;}
