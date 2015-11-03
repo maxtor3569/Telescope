@@ -1,10 +1,19 @@
 Meteor.methods({
     'createAccount': function(params){
-      Accounts.createUser({
-        email:    params.email,
-        password: params.password,
-        username: params.username
-      });
+
+      if(Meteor.isServer) {
+          if(!Meteor.users.findOne()) {
+            console.log('fasjdkhfkjasdhjfklahkjh');
+            Accounts.createUser({
+              email:    params.email,
+              password: params.password,
+              username: params.username
+            });
+
+
+          }
+      }
+
 
     },
     'anonymeUpdate': function(params){

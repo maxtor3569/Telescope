@@ -54,8 +54,9 @@ Meteor.startup(function () {
   // Categories Admin
 
   Router.route('/categories', {
-    controller: Telescope.controllers.admin,
-    name: 'categories'
+    name: 'categories',
+    template : "categories.html"
   });
 
 });
+

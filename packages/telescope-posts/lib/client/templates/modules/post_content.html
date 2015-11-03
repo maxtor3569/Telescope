@@ -1,13 +1,13 @@
 <template name="post_content">
     {{> modules "postThumbnail"}}
-    <div class="post-info">
+    <div class="post-info{{adminMessage}}">
       <div>
         <div style="float: left;position: relative;top: 17px;left: 18px;">
           <a href="{{getProfileUrl userId}}" class="avatar-link avatar-small author-avatar">
             {{> avatar userId=userId shape="circle"}}
           </a>
         </div>
-        <h3 class="post-heading">
+          <h3 class="post-heading{{adminMessage}}">
           {{> modules "postHeading"}}
           {{> post_discuss }}
         </h3>

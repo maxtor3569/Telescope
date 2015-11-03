@@ -14,5 +14,8 @@ Template.post_content.helpers({
   },
   commentsDisplayText: function(){
     return this.comments === 1 ? i18n.t('comment') : i18n.t('comments');
+  },
+  adminMessage: function () {
+      return this.isAdminMessage ? "-admin" : "";
   }
 });

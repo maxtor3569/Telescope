@@ -9,7 +9,7 @@ Meteor.startup(function () {
 
 Meteor.startup(function() {
 
-  var seoProperties = {
+    var seoProperties = {
     meta: {},
     og: {}
   };

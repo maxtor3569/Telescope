@@ -38,18 +38,68 @@ Posts.schema = new SimpleSchema({
       },
       type: String,
       optional: false,
-      editableBy: ["member", "admin"]
+      editableBy: ["member", "admin"],
+      autoform: {
+        placeholder: "What text have you received?"
+      }
   },
+  /*
+  Category for message/posting
+  */
+  category: {
+    type: String,
+    label: "What sort of reply are you after?",
+    optional: false,
+    editableBy: ["member", "admin"],
+    allowedValues: ['funny', 'calming', 'intriguing', "polite 'no'", 'sarcastic', 'hurtful', 'other'],
+    autoform: {
+      options: [
+        {label: "Funny", value: "funny"},
+        {label: "Calming", value: "calming"},
+        {label: "Intriguing", value: "intriguing"},
+        {label: "Polite 'No'", value: "polite 'no'"},
+        {label: "Sarcastic", value: "sarcastic"},
+        {label: "Hurtful", value: "hurtful"},
+        {label: "Other", value: "other"}
+      ]
+    }
+    // autoform: {
+    //     options: function () {
+    //       // Categories.insert({name : 'One', order :1});
+    //       return Meteor.categories.find().map(function (category) {
+    //         return {
+    //           value: category._id,
+    //           label: category.name
+    //         };
+    //       });
+    //     }
+    // }
+  },
+
+  newCategory : {
+    type: String,
+    optional: true,
+    editableBy: ["member", "admin"],
+    autoform: {
+        placeholder: "What sort of reply are you after? *"
+      }
+  },
+
     /**
-  Context
-*/
-  context: {
+      Whether the post is an admin message
+    */
+  isAdminMessage: {
       label: function () {
-          return "Back story (optional)"
+          return "Admin Message"
       },
-      type: String,
+      type: Boolean,
       optional: true,
-      editableBy: ["member", "admin"]
+      defaultValue: false,
+      editableBy: ["admin"],
+      autoform: {
+          group: 'admin',
+          leftLabel: "Admin Message"
+      }
   },
     /**
     Count of how many times the post's page was viewed
@@ -207,6 +257,8 @@ Posts.schema = new SimpleSchema({
     }
   }
 });
+
+
 
 // schema transforms
 Posts.schema.internationalize();

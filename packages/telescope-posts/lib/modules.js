@@ -30,6 +30,15 @@ Telescope.modules.add("postHeading", [
   }
 ]);
 
+Telescope.modules.add("postCategory", [
+  {
+    template: 'post_category',
+    order: 10
+  },
+]);
+
+
+
 Telescope.modules.add("postContext", [
   {
     template: 'post_context',

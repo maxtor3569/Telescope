@@ -14,7 +14,7 @@ Template.commentsListController.onCreated(function () {
 
   // initialize the reactive variables
   instance.terms = new ReactiveVar(instance.data.terms);
-  instance.commentsLimit = new ReactiveVar(Settings.get('commentsPerPage', 5));
+  instance.commentsLimit = new ReactiveVar(Settings.get('commentsPerPage', 100));
 
   // 2. Autorun
 
@@ -22,7 +22,7 @@ Template.commentsListController.onCreated(function () {
   instance.autorun(function () {
     // add a dependency on data context to trigger the autorun
     var terms = Template.currentData().terms; // ⚡ reactive ⚡
-    instance.commentsLimit.set(Settings.get('commentsPerPage', 5));
+    instance.commentsLimit.set(Settings.get('commentsPerPage', 100));
   });
 
   // Autorun 2: will re-run when limit or terms are changed
@@ -70,7 +70,7 @@ Template.commentsListController.helpers({
     var terms = instance.terms.get(); // ⚡ reactive ⚡
     var commentsReady = instance.subscriptionsReady(); // ⚡ reactive ⚡
 
-    var commentsLimit = terms.limit;
+    var commentsLimit = 100;//terms.limit;
     var parameters = Comments.getSubParams(terms);
     var commentsCursor = Comments.find(parameters.find, parameters.options);
 
@@ -91,7 +91,7 @@ Template.commentsListController.helpers({
 
         // increase limit by 5 and update it
         var limit = instance.commentsLimit.get();
-        limit += Settings.get('commentsPerPage', 5);
+        limit += Settings.get('commentsPerPage', 100);
         instance.commentsLimit.set(limit);
 
       },

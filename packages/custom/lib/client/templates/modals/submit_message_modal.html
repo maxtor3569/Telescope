@@ -1,0 +1,31 @@
+<template name="submit_message_modal">
+  <div class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div id="submit-body-modal" class="modal-body">
+        {{#autoForm collection="Posts" id="submitPostForm" type="method" meteormethod="submitPost"}}
+            <fieldset>
+              <div id="postTitleModal">
+                {{> afQuickField name='title'}}
+              </div>
+              <div id="catgoryContainer">
+                <div id="categoryLabel">
+                  <label>What sort of reply are you after?</label>
+                </div>
+                <div id="categorySelection">
+                  {{> afFieldInput id="catBox" name="category" class="has-error" type="select-radio-inline"}}
+                    <img />
+                  {{#if afFieldValueIs name="category" value="other"}}
+                    {{> afQuickField id="newCatBox" name="newCategory"}}<img />
+                  {{/if}}
+
+                </div>
+              </div>
+            </fieldset>
+            <button type="submit" id="submitPostButton" class="submit btn header-submodule btn-primary">Post</button>
+          {{/autoForm}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
