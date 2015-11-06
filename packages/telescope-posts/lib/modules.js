@@ -63,8 +63,8 @@ Telescope.modules.add("postMeta", [
     template: 'post_upvote',
     order: 10
   },
-  {
-    template: 'post_discuss',
-    order: 60
-  },
+  // {
+  //   template: 'post_discuss',
+  //   order: 60
+  // },
 ]);
